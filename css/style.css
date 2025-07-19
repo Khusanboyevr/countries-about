@@ -1,33 +1,59 @@
-.container{
-    position: relative;
-    width: 100%;
-    max-height: 100vh;
-    background-color: #f5f5f5;
-    z-index: 1;
+/* DARK MODE */
+.dark-main-page{
+    --header-card-bg: #2B3844;
+    --body-bg: #202C36;
+    --text: white;
 }
+/* DARK MODE */
+
+:root {
+    --header-card-bg: var(--header-card-bg);
+    --body-bg: #f5f5f5;
+    --text: black;
+}
+
+
+.container{
+    width: 100%;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--body-bg);
+}
+
+
 /* HEADER styles */
 
 .headqismi{
-    background-color: white;
-    width: 1840px;
+    background-color: var(--header-card-bg);
     height: 80px;
     display: flex;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1)
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding-left: 81px;
+    padding-right: 40px;
+    justify-content: space-between;
 }
 
-.headqismi h2{
-    position: absolute;
-    left: 5%;
+.header-title{
+    position: relative;
     font-family: 'Nunito', 'Sans';
     font-size: 24px;
+    color: var(--text);
 }
 
-.mainbutton{
+.dark-mode{
     display: flex;
-    position: absolute;
-    right: 5%;
     margin-top: 16px;
     color: rgb(0, 0, 0);
+    position: relative;
+    color: var(--text);
 
     border-radius: 8px;
     font-size: 16px;
@@ -40,7 +66,7 @@
     justify-content: center;
     gap: 8px;
     border: none;
-    background-color: white;
+    background-color: var(--header-card-bg);
     cursor: pointer;
 }
 button:hover{
@@ -52,51 +78,26 @@ button:hover{
 
 /* SEARCH*/
 .search-filtr{
-    margin-top: 60px;
+    padding-top: 48px;
+    padding-bottom: 48px;
     display: flex;
-    width: 1840px;
-    height: 60px;
-}
-.inputsearch{
-    left: 5%;
-    margin-top: -11px;
-    position: absolute;
-    width: 300px;
-    position: absolute;
-}
-.inputsearch .search-icon{
-    position: absolute;
-    top: 20px;
-    left: 12px;
-    transform: translateY(-50%)
-}
-.inputsearch input{
-    width: 300px;
-    padding: 12px 12px 12px 40px;
-    border: none;
-    border-radius: 0px;
-    background-color: white;
-    font-size: 14px;
-    color: #333;
-    outline: none;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1)
-}
-.inputsearch input::placeholder{
-    color: #999;
+    align-items: center;
+    justify-content: space-between;
 }
 
 /* FILTER*/
 
 .filterbyreg{
-    position: absolute;
-    margin-top: -19px;
-    right: 7%;
-    width: 250px;
+    position: relative;
+    left: 83%;
+    width: 150px;
     font-family: 'Nunito','Sans';
-    background-color: white;
+    background-color: var(--header-card-bg);
     border-radius: 10px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     padding: 10px;
+    width: 170px;
+    color: var(--text);
 }
 
 .filterbyreg summary {
@@ -104,6 +105,15 @@ button:hover{
     cursor: pointer;
     font-size: 16px;
     padding: 10px;
+}
+
+.filter-ul {
+    position: absolute;
+    width: 170px;
+    left: 0;
+    
+    border-radius: 10px;
+    background-color: var(--header-card-bg);
 }
 
 .filterbyreg[open] summary{
@@ -121,7 +131,7 @@ button:hover{
     border-radius: 5px;
     transition: background 0.2s;
     cursor: pointer;
-    
+    color: var(--text);
 }
 .filterbyreg a{
     text-decoration: none;
@@ -135,40 +145,38 @@ button:hover{
 
 /* MAIN CARDS */
 .mainqism{
-    position: absolute;
     font-family: 'Nunito', 'Sans';
-    width: 1840px;
-
 }
 
-.councards{
-    margin-left: 55px;
-    width: 100%;
+.coundcards-a {
+    width: 264px;
 }
 
 .councards ul{
     list-style: none;
-    max-width: 1790px;
     height: 850px;
+    padding-left: 81px;
+    padding-right: 10px;
     display: grid;
     grid-template-columns: repeat(4,1fr);
+    justify-content: space-between;
 }
 .councards li:hover{
-    background-color: #F2F2F2;
+    background-color: #f2f2f2;
 }
 
 .councards li{
-    background-color: white;
-    width: 300px;
-    height: 450px;
-    padding: 35px;
-    gap: 75px;
-    padding-bottom: 10px;
+    width: 100%;
+    max-width: 264px;
+    background-color: var(--header-card-bg);
     border-radius: 7px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    width: 264px;
-    height: 336px;
+    height: 380px;
+    color: var(--text);
+}
 
+.card-content {
+    padding: 24px;
 }
 
 .councards a{
@@ -176,22 +184,29 @@ button:hover{
     text-decoration: none;
 }
 
-/* PAGES CARDS */
+.hr-line {
+    display: none;
+}
+
+
+/* Pages */
 
 .maincardspages{
-    color: black;
-    background-color: white;
     font-family: 'Nunito', 'Sans';
-    margin-top: 8px;
-    left: 5%;
+    color: var(--text);
 }
+
 .maincardspages a{
     text-decoration: none;
 }
+
 .backbutton{
     display: flex;
-    position: absolute;
-    margin-top: -280px;
+    margin-top: 80px;
+}
+
+.backiicon {
+    color: var(--text);
 }
 
 .backicon{
@@ -199,47 +214,44 @@ button:hover{
     display: flex;
     margin-left:85px;
     color: rgb(0, 0, 0);
-
     border-radius: 8px;
     font-size: 16px;
     font-family: 'Nunito', 'Sans';
-    transition: background-color 0.3 ease;
     width: 200px;
     height: 35px;
-
     align-items: center;
     justify-content: center;
     gap: 8px;
     border: none;
-    background-color: white;
+    background-color: var(--header-card-bg);
     cursor: pointer;
+    border: 2px solid var(--header-card-bg);
+    margin-bottom: 40px;
 }
 button:hover{
     background-color: #f0f0f0;
+    border: 2px solid black;
+    transition: 0.5s ease;
 }
+
+/* Cards */
 
 .cardsmain{
     display: flex;
     align-items: center;
-    margin-top: 350px;
 }
+
 
 .cardsmain ul{
     left: 45%;
-    position: absolute;
-
-    margin-top: -30px;
     align-items: start;
     flex-wrap: wrap;
-    padding: 40px 20px;
     gap: 30px;
-    
+    padding-left: 100px;
     list-style: none;
-    padding-bottom: 35px;
 }
 .liitwo{
-    margin-left: 450px;
-    position: absolute;
+    
     margin-bottom: -1px;
 }
 
@@ -250,25 +262,23 @@ button:hover{
     font-size: 16px;
 }
 .cardsmain img{
-    left: 5%;
-    position: absolute;
-    display: flex;
     border-radius: 4px;
-
+    margin-left: 81px;
 }
 
 .bordercount{
     display: flex;
-    position: absolute;
     align-items: center;
     gap: 10px;
-    margin-top: 120px;
-    left: 46.2%;
+    position: relative;
+    width: 431px;
+    left: 51.6%;
 }
 
 .bordercountt{
+    color: var(--text);
     border: none;
-    background-color: white;
+    background-color: var(--header-card-bg);
     display: flex;
     font-size: 14px;
     text-align: center;
@@ -276,10 +286,199 @@ button:hover{
     justify-content: center;
     align-items: center;
     transition: background-color 0.3 ease;
-
     width: 80px;
     height: 30px;
     cursor: pointer;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
+}
+
+/* RESPONSIVE
+@media (max-width: 1440px) {
+    .councards ul{
+        padding-left: 81px;
+        padding-right: 80px;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        
+    }
+} */
+
+@media (max-width: 1350px) {
+    .councards ul{
+        padding-left: 81px;
+        padding-right: 80px;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        justify-content: space-around;
+        gap: 20px;
+        
+    }
+
+    .coundcards-a {
+        width: 100px;
+    }
+
+    .mainqism {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 1340px) {
+    .maincardspages {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cardsmain{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cardsmain ul {
+        padding-left: 0;
+    }
+
+    .cardsmain img {
+        margin-left: 0;
+    }
+
+    .infocount {
+        text-align: center;
+    }
+
+    .liitwo {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .bordercount {
+        left: 0%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .backicon {
+        margin-left: 0;
+    }
+    .headqismi {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+@media (max-width: 1110px) {
+    .filterbyreg {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mainqism {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+    }
+    .filterbyreg {
+        display: flex;
+        position: relative;
+        left: 0;
+    }
+
+    .councards li{
+        width: 200px;
+        font-size: 13px;
+    }
+    .cards-img {
+        width: 200px;
+    }
+}
+
+@media (max-width: 800px) {
+    .councards ul {
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .councards li {
+        height: 360px;
+    }
+}
+
+@media (max-width: 721px) {
+    .headqismi {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 160px;
+    }
+}
+
+@media (max-width: 641px) {
+    .card-img {
+        width: 100%;
+        max-width: 400px;
+        height: 300px;
+    }
+
+    .infocount {
+        margin-top: -40px;
+        width: 250px;
+    }
+
+    .hr-line {
+        display: block;
+    }
+    
+    .liitwo {
+        margin-top: -20px;
+    }
+}
+
+@media (max-width: 410px) {
+    .header-title {
+        font-size: 20px;
+    }
+
+    .mainqism {
+        width: 100px;
+    }
+}
+
+@media (max-width: 435px) {
+    .card-img {
+        width: 100%;
+        max-width: 340px;
+        height: 300px;
+    }
+
+    .backicon {
+        margin-bottom: -15px;
+        margin-top: -30px;
+    }
+
+    .bordercount {
+        width: 190px;
+    }
+}
+
+@media (max-width: 410px) {
+    .header-title {
+        font-size: 20px;
+    }
+
+    .councards ul {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
 }

@@ -13,21 +13,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Germany</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <!-- <link rel="stylesheet" href="/css/style.css"> -->
+    <link rel="stylesheet" href="/css/style.min.css">
 </head>
 <body>
     <header>
-        <div class="headqismi">
-            <h2><strong>Where in the world?</strong></h2>
+        <div class="headqismi container">
+            <h2 class="header-title"><strong>Where in the world?</strong></h2>
 
-            <a href=""><button class="mainbutton"><img src="/img/moon.svg" alt="moon pic">Dark Mode</button></a>
+            <button class="dark-mode"><img src="/img/moon.svg" alt="moon pic">Dark Mode</button>
         </div>
     </header>
 
-    <main class="maincardspages">
-        <div class="container">
-            <div class="cardsmain">
-            <img src="/img/afghanistan.svg" width="560" height="401" alt="afghanistan-flag">
+    <main class="maincardspages container">
+        <div 
+            class="backbutton"><a href="/index.html"><button class="backicon"> <img src="/img/strelka.svg" alt="back-icon">Back</button></a>
+        </div>
+        <div class="cardsmain">
+            <img class="card-img" src="/img/afghanistan.svg" width="560" height="401" alt="afghanistan-flag">
             <ul class="infocount">
                 <li>
                     <h3>Afghanistan</h3>
@@ -36,6 +39,7 @@
                     <p><strong>Region:</strong> Asia</p>
                     <p><strong>Capital:</strong> Kabul</p>
                     <p><strong>Sub Region:</strong> Southern Asia</p>
+                    <hr class="hr-line">
                 </li>
             </ul>
             <ul class="liitwo">
@@ -43,6 +47,7 @@
                     <p><strong>Top Level Domain:</strong> .af</p>
                     <p><strong>Currencies:</strong> Afghan Afghani</p>
                     <p><strong>Languages:</strong> Pashto, Dari</p>
+                    <hr class="hr-line">
                 </li>
             </ul>
         </div>
@@ -52,9 +57,7 @@
             <a href="#"><button class="bordercountt">Pakistan</button></a>
             <a href="#"><button class="bordercountt">Uzbekistan</button></a>
         </div>
-        <div 
-            class="backbutton"><a href="/index.html"><button class="backicon"> <img src="/img/strelka.svg" alt="back-icon">Back</button></a>
-        </div>
+        
         </div>
     </main>
 </body>
